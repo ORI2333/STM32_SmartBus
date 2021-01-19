@@ -2,7 +2,7 @@
 Realize data interaction between hardware and Alibaba Cloud platform through STM32, 4G, and MQTT protocols
 通过STM32、4G和MQTT协议实现硬件与阿里云平台之间的数据交互
 
-# 具体
+# 具体Specific
 硬件分为主控、数据采集、下位机数据显示和数据传输四大部分。其开发平台为MDK KEIL 5。裸机开发，无RTOS系统。
 1. 主控芯片选择为STM32F103ZET6。
 2. 数据采集中的定位功能选择外接ZX1612模块（郑州信大先进技术研究所自研），通过USART协议来连接主控，其解码采用NAME库，发送采用乒乓球式缓存技术；温湿度检测DHT11温湿度传感器，主控通过读取DATA口时序一次解析40bit数据；其中车内人数的测量通过在车辆的前后门处，各安装一对红外对管对射式光电开关传感器实现，主控通过EXTI外设控制器，捕获传感器输出信号的下降沿来获取是否有人通过；乘客间距需要在座位下安装压力传感器采集获得，主控获取方式同上；乘客体温数据则需要在车门处安装MXL90614GYBAA传感器来获得，通过SMBUS协议通信。
@@ -16,7 +16,7 @@ The hardware is divided into four parts: main control, data acquisition, lower c
 4. Quectel EC20 is selected for data transmission, which is connected with the main control through the USART protocol. At the same time, the EC20 sends data to the Alibaba Cloud IoT platform through the MQTT protocol. The service quality is QoS 0, and it can also accept data from the cloud platform.
 
 
-# 最后last
+# 最后Last
 我知道这个系统还存在很多缺陷，比如裸机开发，代码逻辑不够清晰，而且繁琐。而且MQTT质量低，容易丢包。还有一些硬件选材不够合适，造成资源浪费。
 恳请各位大佬提出意见，甚至可以一起完善这个项目，谢谢！  
 I know that this system still has many flaws, such as bare metal development, the code logic is not clear enough, and cumbersome. Moreover, the quality of MQTT is low and packets are easily lost. In addition, some hardware materials are not suitable enough, causing a waste of resources.
