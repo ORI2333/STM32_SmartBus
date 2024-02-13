@@ -9,5 +9,12 @@ Realize data interaction between hardware and Alibaba Cloud platform through STM
 I know that this system still has many flaws, such as bare metal development, the code logic is not clear enough, and cumbersome. Moreover, the quality of MQTT is low and packets are easily lost. In addition, some hardware materials are not suitable enough, causing a waste of resources.
 I sincerely ask you all for your opinions, and you can even improve this project together, thank you!
 
+
 **该项目仅供学习用**
 **This project is for learning purposes only**
+
+---
+2024.2.13 更新日志
+
+复述了该项目的说明文档，详细见[智慧公交.md]。
+该项目为个人在大二所立项，毕业后闲暇整理本科项目。
